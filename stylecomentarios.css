@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: "Poppins", system-ui;
+  background-color: #f4f4f4; /* Color de fondo claro */
+  color: #333; /* Color de texto oscuro para mejorar la legibilidad */
+}
+img {
+  max-width: 100%;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Estilos para el encabezado */
+.header {
+  background-color: #89001c;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 80px 0 0 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu .navbar ul li {
+  float: left;
+}
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 12px;
+  color: #fff;
+  display: block;
+  font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+  color: #e4a1a1; /* Color más suave al pasar el cursor */
+}
+
+#menu {
+  display: none;
+}
+.menu-icono {
+  width: 25px;
+}
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.header-txt {
+  text-align: center;
+  padding: 0 200px;
+}
+.header-txt h1 {
+  font-size: 70px;
+  color: #fff;
+  font-family: "Cambria", serif;
+  text-align: center;
+}
+
+/* Estilos para la sección de comentarios */
+.comentarios {
+  padding: 50px 20px;
+  background-color: #fff; /* Fondo blanco para resaltar el contenido */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.comentarios h2 {
+  color: #89001c; /* Título en color burdeos */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.comentarios p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cajoncomentarios form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cajoncomentarios label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.cajoncomentarios input[type="text"],
+.cajoncomentarios textarea,
+.cajoncomentarios select {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.cajoncomentarios input[type="text"]:focus,
+.cajoncomentarios textarea:focus,
+.cajoncomentarios select:focus {
+  border-color: #89001c;
+  outline: none;
+}
+
+.cajoncomentarios input[type="submit"] {
+  padding: 10px 30px;
+  background-color: #89001c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cajoncomentarios input[type="submit"]:hover {
+  background-color: #b50a0a; /* Efecto hover */
+}
+
+/* Sección de comentarios recientes */
+#commentsSection {
+  margin-top: 40px;
+  background-color: #fdfdfd;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#commentsSection h3 {
+  text-align: center;
+  color: #333;
+}
+
+#commentsList {
+  margin-top: 20px;
+}
+
+#commentsList li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f4f4f4;
+  border-left: 4px solid #89001c;
+  border-radius: 4px;
+}
+
+/** Estilos responsive */
+@media (max-width: 768px) {
+  .menu {
+    padding: 20px;
+  }
+  .menu label {
+    display: initial;
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #b97979;
+    display: none;
+  }
+
+  .menu .navbar.active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu .navbar ul li {
+    width: 100%;
+  }
+
+  .menu .navbar ul li a {
+    color: #040404;
+  }
+
+  .menu .navbar ul li a:hover {
+    color: rgba(129, 24, 13, 0.709);
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+
+  .header {
+    min-height: 0vh;
+    padding: 100px 30px;
+  }
+
+  .header-txt {
+    text-align: center;
+    padding: 0;
+  }
+
+  .comentarios {
+    padding: 30px 15px;
+  }
+
+  .cajoncomentarios input[type="text"],
+  .cajoncomentarios textarea,
+  .cajoncomentarios select {
+    width: 100%;
+  }
+}

@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: "Poppins", system-ui;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  background: url(img/fondoarriba.jpg);
+  background-color: #89001c;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain; /* La imagen se redimensiona para que siempre se vea completa */
+  display: flex;
+  align-items: center;
+  padding: 80px 0 0 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 12px;
+  color: #fff;
+  display: block;
+  font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+  color: #b50a0a;
+}
+
+#menu {
+  display: none;
+}
+.menu-icono {
+  width: 25px;
+}
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.header-txt {
+  text-align: center;
+  padding: 0 200px;
+}
+.header-txt h1 {
+  font-size: 70px;
+  line-height: 1;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+p {
+  font-size: 17px;
+  color: #000000;
+  margin-bottom: 35px;
+}
+
+/** responsive de la cabecera */
+@media (max-width: 768px) {
+  .menu {
+    padding: 20px;
+  }
+  .menu label {
+    display: initial; /* Asegúrate de que la etiqueta del menú hamburguesa sea visible */
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%; /* Coloca el menú debajo del botón hamburguesa */
+    left: 0;
+    right: 0;
+    background-color: #b97979;
+    display: none; /* Mantiene el menú oculto inicialmente */
+  }
+
+  .menu .navbar.active {
+    /* Clase para mostrar el menú cuando está activo */
+    display: flex; /* Muestra el menú en flex cuando esté activo */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+  }
+
+  .menu .navbar ul li {
+    width: 100%; /* Cada elemento del menú ocupa el ancho completo */
+  }
+  .menu .navbar ul li a {
+    color: #040404; /* Cambia este color al que desees, por ejemplo, a un color negro o rojo */
+    text-decoration: none; /* Opcional: elimina el subrayado del enlace */
+  }
+
+  .menu .navbar ul li a:hover {
+    color: rgba(129, 24, 13, 0.709);
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+
+  .header {
+    min-height: 0vh;
+    padding: 100px 30px;
+  }
+  .header-txt {
+    text-align: center;
+    padding: 0;
+  }
+}

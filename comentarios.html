@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comentarios con LocalStorage</title>
+    <link rel="stylesheet" href="stylecomentarios.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="menu container">
+        <a href="#" class="logo"></a>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+          <img src="img/menu.png" class="menu-icono" alt="menu" />
+        </label>
+
+        <nav class="navbar">
+          <ul>
+            <li><a href="mapa.html"> MAPA </a></li>
+            <li><a href="repositorio.html">REPOSITORIO </a></li>
+            <li><a href="index.html"> INICIO </a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header-content container">
+        <div class="header-txt">
+          <h1>BIOUAO</h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="comentarios" id="opiniones">
+      <div class="comentarios-content container">
+        <div class="comentarios-txt">
+          <h2>OBSERVACIONES BIODIVERSIDAD</h2>
+          <hr />
+          <p>
+            EN ESTE ESPACIO PUEDES ESCRIBIR SOBRE LAS ESPECIES QUE VISTES, QUÉ
+            ES LO QUE MÁS TE GUSTA Y TE INTERESA DE ELLAS, Y PUEDES TAMBIÉN
+            PONER EN DÓNDE LAS VISTES.
+          </p>
+        </div>
+
+        <!-- Formulario de comentarios -->
+        <div class="cajoncomentarios">
+          <form id="commentForm">
+            <label for="fname">Especie que viste:</label><br />
+            <input type="text" id="fname" name="fname" required /><br /><br />
+
+            <label for="message">Escribe tus apreciaciones de la especie:</label
+            ><br />
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              cols="50"
+              placeholder=""
+              required
+            ></textarea
+            ><br />
+
+            <p>Elige la ubicación de la especie:</p>
+            <select name="ubicacion" id="ubicacion" required>
+              <option value="Cafetería">Cafetería</option>
+              <option value="Lago">Lago</option>
+              <option value="Arco">Arco</option>
+              <option value="Aulas1">Canchas</option>
+              <option value="Aulas1">Aulas 1</option>
+              <option value="Aulas1">Aulas 2</option>
+              <option value="Aulas1">Aulas 3</option>
+              <option value="Aulas1">Aulas 4</option></select
+            ><br /><br />
+
+            <input type="submit" value="Enviar" /><br />
+          </form>
+        </div>
+
+        <!-- Sección para mostrar comentarios -->
+        <div id="commentsSection">
+          <h3>Comentarios recientes</h3>
+          <ul id="commentsList"></ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

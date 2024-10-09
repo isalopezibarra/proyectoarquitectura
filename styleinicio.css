@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  font-family: "Poppins", system-ui;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  background: url(img/fondoarriba.jpg);
+  background-color: #89001c;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain; /* La imagen se redimensiona para que siempre se vea completa */
+  display: flex;
+  align-items: center;
+  padding: 80px 0 0 0;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu .navbar ul li {
+  position: relative;
+  float: left;
+}
+/* Estilo para los enlaces del menú */
+.menu .navbar ul li a {
+  font-size: 18px;
+  padding: 12px;
+  color: #fff;
+  display: block;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Animación cuando se pasa el cursor por encima */
+.menu .navbar ul li a:hover {
+  color: #ffffff; /* Cambia el color al pasar el cursor */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Animación cuando se hace clic en el enlace */
+.menu .navbar ul li a:active {
+  transform: scale(0.95); /* Reduce ligeramente el tamaño al hacer clic */
+}
+
+#menu {
+  display: none;
+}
+.menu-icono {
+  width: 25px;
+}
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.header-txt {
+  text-align: center;
+  padding: 0 200px;
+}
+.header-txt h1 {
+  font-size: 70px;
+  line-height: 1;
+  color: #fff;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif,
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+
+p {
+  font-size: 17px;
+  color: #000000;
+  margin-bottom: 35px;
+}
+
+.about {
+  padding: 50px 0;
+  background-color: rgb(221, 224, 222);
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+.about-txt {
+  flex-basis: 50%;
+  padding-right: 35px;
+  text-align: justify; /* Alinea el texto a la derecha */
+}
+
+span {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #b50a0a;
+}
+
+h2 {
+  font-size: 30px;
+  margin: 15px 0;
+  line-height: 1;
+}
+
+hr {
+  border: 1px solid #b50a0a;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.about-img {
+  flex-basis: 50%;
+}
+
+.about-img img {
+  border-radius: 15px;
+}
+
+/* estilo del segndo cajn el de la cop16*/
+/* estilo del segundo cajón el de la cop16 */
+.cop16 {
+  padding: 50px 0;
+  background-color: #89001c;
+}
+
+.cop16-content {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.cop16-txt {
+  flex-basis: 50%; /* La parte del texto ocupará el 50% del ancho */
+  padding-left: 35px; /* Espacio a la izquierda para que no esté pegado a la imagen */
+  text-align: justify; /* Alinea el texto a la derecha */
+}
+
+.cop16 p {
+  color: #fff;
+}
+
+.cop16 hr {
+  border: 3px solid #ffffff;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.cop16-img {
+  flex-basis: 50%; /* La parte de la imagen ocupará el 50% del ancho */
+  text-align: left; /* Alinea la imagen a la izquierda */
+}
+
+.cop16-img img {
+  border-radius: 15px;
+  max-width: 80%; /* Asegúrate de que la imagen no se desborde */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+/** cuando la pantalla es pequeña para que la imagen se acomde bien el responsive*/
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Cambia la dirección de flex a columna */
+    align-items: center;
+    text-align: center; /* Centra los elementos */
+  }
+  .cop16-content {
+    flex-direction: column; /* Cambia la dirección de flex a columna */
+    align-items: center; /* Centra los elementos */
+    text-align: center;
+  }
+
+  .about-txt {
+    padding-right: 0; /* Elimina el padding derecho */
+    padding-bottom: 20px; /* Espacio debajo del texto */
+    align-items: left;
+    text-align: center;
+  }
+  .cop16-txt {
+    padding-left: 0; /* Elimina el padding derecho */
+    padding-bottom: 20px; /* Espacio debajo del texto */
+    align-items: rigth;
+    text-align: center;
+  }
+
+  .about-img {
+    flex-basis: 100%; /* Hace que la imagen ocupe todo el ancho */
+    text-align: center; /* Centra la imagen */
+  }
+  .cop16-img {
+    flex-basis: 100%; /* Hace que la imagen ocupe todo el ancho */
+    text-align: center; /* Centra la imagen */
+  }
+
+  .about-img img {
+    max-width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  .cop16-img img {
+    max-width: 80%;
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+}
+
+/** Botones */
+
+.botones-contenedor {
+  padding: 50px 0;
+  background-color: #fef3e8;
+  text-align: center; /* Centra el contenido dentro de este contenedor */
+}
+
+.botones-container {
+  display: flex; /* Utiliza flexbox para alinear elementos */
+  flex-direction: column; /* Alinea los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.lista-botones {
+  display: flex;
+  padding: 20px 50px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-left: 0;
+  height: 300px;
+}
+
+.lista-botones img {
+  width: 100px;
+  padding-bottom: 30px;
+}
+
+.lista-botones p {
+  font-size: 25px;
+  margin: 0;
+  width: 400px;
+  /* padding-top: 10px; */
+}
+
+.box {
+  width: 180px;
+  height: 200px;
+  text-align: center;
+  border-radius: 15px;
+  padding: 30px 20px;
+  background-color: #fef3e8;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:hover {
+  width: 300px;
+  background-color: rgba(87, 16, 0, 0.357);
+}
+
+.box a {
+  color: black;
+}
+
+/** responsive de los botones */
+
+@media (max-width: 768px) {
+  .lista-botones {
+    flex-direction: column; /* Cambia la dirección de la flexbox a columna */
+    align-items: center; /* Alinea los elementos al centro */
+    justify-content: center; /* Asegura que los botones estén centrados */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    padding: 0; /* Elimina el padding adicional */
+  }
+
+  .box {
+    width: 100%; /* Hace que cada botón ocupe el ancho completo */
+    max-width: 300px; /* Limita el ancho máximo para cada botón */
+    margin-bottom: 20px; /* Añade un margen entre los botones para que no estén pegados */
+  }
+}
+
+/** responsive de la cabecera */
+@media (max-width: 768px) {
+  .menu {
+    padding: 20px;
+  }
+  .menu label {
+    display: initial; /* Asegúrate de que la etiqueta del menú hamburguesa sea visible */
+  }
+
+  .menu .navbar {
+    position: absolute;
+    top: 100%; /* Coloca el menú debajo del botón hamburguesa */
+    left: 0;
+    right: 0;
+    background-color: #b97979;
+    display: none; /* Mantiene el menú oculto inicialmente */
+  }
+
+  .menu .navbar.active {
+    /* Clase para mostrar el menú cuando está activo */
+    display: flex; /* Muestra el menú en flex cuando esté activo */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+  }
+
+  .menu .navbar ul li {
+    width: 100%; /* Cada elemento del menú ocupa el ancho completo */
+  }
+  .menu .navbar ul li a {
+    color: #040404; /* Cambia este color al que desees, por ejemplo, a un color negro o rojo */
+    text-decoration: none; /* Opcional: elimina el subrayado del enlace */
+  }
+
+  .menu .navbar ul li a:hover {
+    color: rgba(129, 24, 13, 0.709);
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+
+  .header {
+    min-height: 0vh;
+    padding: 100px 30px;
+  }
+  .header-txt {
+    text-align: center;
+    padding: 0;
+  }
+}
